@@ -1195,7 +1195,7 @@
               <div class="card-number">04 / ART & EXPRESSION</div>
               <h3>Feeling, Form & Meaning</h3>
               <p>
-                Visual art, poetry, murals, styling, and creative
+                Visual art, poetry, styling, and creative
                 spaces that tell a story.
               </p>
               <span>Discover Her Vision ↗</span>
@@ -1408,7 +1408,7 @@
             <div class="number">C / ART & SPACES</div>
             <h3>Make a Feeling Visible</h3>
             <p>
-              Murals, poetry, interior styling, and garden design
+              Poetry, interior styling, and garden design
               offer ways to experiment with atmosphere, composition,
               and personal expression.
             </p>
