@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -524,6 +524,19 @@
 
     .book-cover .title em {
       color: #d9bd8e;
+    }
+
+    /* Actual book cover image display */
+    .book-cover-img {
+      width: 275px;
+      box-shadow: 15px 17px 0 rgba(40, 28, 23, .13);
+      transform: rotate(-3deg);
+      border: 0;
+    }
+
+    .book-cover-img img {
+      width: 100%;
+      height: auto;
     }
 
     .book-item {
@@ -1159,7 +1172,13 @@
             </div>
           </a>
 
-          <a class="portfolio-card" href="#books">
+          <!-- BOOKS — opens full-screen books gallery -->
+          <a class="portfolio-card" href="#books-gallery" data-gallery="books">
+            <img
+              src="https://i.postimg.cc/J0sBRVpM/download.png"
+              alt="The Living World book cover"
+              loading="lazy">
+
             <div class="card-copy">
               <div class="card-number">03 / WRITING & PUBLISHING</div>
               <h3>Ideas Into Pages</h3>
@@ -1303,11 +1322,11 @@
       <div class="books-grid">
 
         <div class="book-display">
-          <div class="book-cover">
-            <div class="small">A field of discovery</div>
-            <div class="leaf">❧</div>
-            <div class="title">The<br><em>Living</em><br>World</div>
-            <div class="small">Written by Naraji Love</div>
+          <div class="book-cover-img">
+            <img
+              src="https://i.postimg.cc/J0sBRVpM/download.png"
+              alt="The Living World book cover by Naraji Love"
+              loading="lazy">
           </div>
         </div>
 
@@ -1628,6 +1647,60 @@
     </div>
   </div>
 
+  <!-- ============ BOOKS GALLERY OVERLAY ============ -->
+  <div class="gallery-overlay" id="books-gallery">
+    <div class="gallery-overlay-header">
+      <div class="container gallery-overlay-nav">
+        <a href="#" class="logo">
+          Naraji Love
+          <small>Ideas Into Pages</small>
+        </a>
+        <button class="close-gallery" data-close>← Back to Portfolio</button>
+      </div>
+    </div>
+
+    <div class="gallery-overlay-intro container">
+      <div class="eyebrow">03 / Writing & Publishing</div>
+      <h1>Ideas Into <em>Pages</em></h1>
+      <p>
+        Educational manuscripts and writing shaped by observation,
+        research, and imagination — a look at the books in development
+        through Naraji Love Publishing.
+      </p>
+    </div>
+
+    <div class="gallery-overlay-body container">
+      <div class="overlay-grid">
+
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/J0sBRVpM/download.png"
+            alt="The Living World book cover by Naraji Love" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/J0sBRVpM/download.png"
+            alt="The Living World book cover by Naraji Love" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/MHnjz29w/download-(1).png"
+            alt="Where the Flower Keeps Its Fire book cover by Naraji Love" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-overlay-cta">
+      <div class="container">
+        <div class="eyebrow">Naraji Love Publishing</div>
+        <h2>Research with a little <em>wonder.</em></h2>
+        <p>
+          For publishing questions, manuscript inquiries, or
+          collaborations, reach out and start a conversation.
+        </p>
+        <a class="button" href="mailto:narajilove@gmail.com">Get in Touch ↗</a>
+      </div>
+    </div>
+  </div>
+
   <script>
     /* Mobile nav */
     const menuButton = document.querySelector(".menu-toggle");
@@ -1687,7 +1760,7 @@
     /* Allow hash links like #nails-gallery to open directly */
     function handleHash() {
       const hash = window.location.hash.replace("#", "");
-      if (hash === "nails-gallery" || hash === "nature-gallery") {
+      if (hash === "nails-gallery" || hash === "nature-gallery" || hash === "books-gallery") {
         closeGalleries();
         openGallery(hash);
       }
